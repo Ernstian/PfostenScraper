@@ -27,9 +27,8 @@ if not os.path.isfile(Database):
 connection = sqlite3.connect(Database)
 cursor = connection.cursor()
 
-AltePfosten = []
-
 for Brett in Bretter:
+    AltePfosten = []
     Filename = Brett + "-Pfosten.txt"
     if os.path.exists(Filename):
         with open(Filename, "r+", encoding = "utf8") as file:
